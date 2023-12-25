@@ -10,7 +10,7 @@ import re
 # Subscriber
 class Subscriber(models.Model):
 	user=models.ForeignKey(User, on_delete=models.CASCADE,null=True)
-	mobile=models.DecimalField(max_digits = 10, decimal_places=10)
+	mobile=models.IntegerField()
 	userid = models.CharField(max_length=50)
 	img = models.ImageField(null=True)
 	

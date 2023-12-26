@@ -10,4 +10,4 @@ def is_valid_email(email):
 
 
 def home(request):
-    return render('templates/index.html')
+    return render(request,'index.html')

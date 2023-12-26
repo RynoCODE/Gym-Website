@@ -4,13 +4,14 @@ from django.contrib.auth.models import User
 from asgiref.sync import async_to_sync
 #from channels.layers import get_channel_layer
 import re
+from django.core.validators import RegexValidator
 #import json
 
 # Create your models here.
 # Subscriber
 class Subscriber(models.Model):
 	user=models.ForeignKey(User, on_delete=models.CASCADE,null=True)
-	mobile=models.IntegerField()
+	mobile = models.CharField(max_length=10, validators=[RegexValidator(r'^\d{1,10}$')])
 	userid = models.CharField(max_length=50)
 	img = models.ImageField(null=True)
 	

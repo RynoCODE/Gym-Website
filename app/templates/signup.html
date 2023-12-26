@@ -10,7 +10,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="signup.css" />
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'styles/signup.css' %}" />
+    <!-- <link rel="stylesheet" href="signup.css" /> -->
     <title>signin-signup</title>
   </head>
   <body>
@@ -88,6 +90,6 @@
         </div>
       </div>
     </div>
-    <script src="signin.js"></script>
+    <script src="{% static 'js/signup.js'}"></script>
   </body>
 </html>

@@ -124,7 +124,7 @@ gsap.from(".card", {
     const signinButton = document.getElementById("cta1");
 
     signinButton.addEventListener("click", function () {
-        window.location.href = "signin.html";
+        window.location.href = "signin";
     });
 });
 
@@ -132,6 +132,6 @@ gsap.from(".card", {
     const signupButton = document.getElementById("cta");
 
     signupButton.addEventListener("click", function () {
-        window.location.href = "signup.html";
+        window.location.href = "signup";
     });
 

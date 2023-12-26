@@ -1,3 +1,4 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -75,7 +76,7 @@
             </p>
             <button class="btn" id="sign-in-btn">Sign in</button>
           </div>
-          <img class="image" src="img/signin.jpg" alt="" />
+          <img class="image" src={% static "img/signin.jpg" %} alt="" />
         </div>
         <div class="panel right-panel">
           <div class="content">
@@ -86,7 +87,7 @@
             </p>
             <button id="sign-up-btn" class="btn">Sign up</button>
           </div>
-          <img class="image" src="img/signup.jpg" alt="" />
+          <img class="image" src={% static "img/signup.jpg" %} alt="" />
         </div>
       </div>
     </div>

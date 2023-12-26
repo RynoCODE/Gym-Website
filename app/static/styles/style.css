@@ -337,7 +337,7 @@ html, body {
 }
 
 #card1 {
-    background-image: url(img/card1.png);
+    background-image: url(/static/img/card1.jpg);
 }
 
 #card2 {

@@ -31,28 +31,29 @@
           </div>
           <input type="submit" value="login" class="btn" />
           <p class="social-text">Or Sign in with social platform</p>
-          <dic class="social-media">
+          <div class="social-media">
             <a href="" class="social-icon"> <i class="fab fa-google"></i></a
             ><a href="" class="social-icon"> <i class="fab fa-twitter"></i></a
             ><a href="" class="social-icon"><i class="fab fa-facebook"></i></a
             ><a href="" class="social-icon"
               ><i class="fab fa-linkedin-in"></i
             ></a>
-          </dic>
+          </div>
         </form>
-        <form action="" class="sign-up-form">
+        <form action="" class="sign-up-form" method="post">
+          {% csrf_token %}
           <h2 class="title">Sign Up</h2>
           <div class="input-filed">
             <i class="fas fa-user"></i>
-            <input type="text" placeholder="Username" />
+            <input type="text" name="username" placeholder="Username" />
           </div>
           <div class="input-filed">
             <i class="fas fa-envelope"></i>
-            <input type="text" placeholder="Email" />
+            <input type="text" name="email"placeholder="Email" />
           </div>
           <div class="input-filed">
             <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Username" />
+            <input type="password" name="password" placeholder="Password" />
           </div>
           <input type="submit" value="Sign up" class="btn" />
           <p class="social-text">Or Sign up with social platform</p>

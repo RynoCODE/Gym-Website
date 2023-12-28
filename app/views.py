@@ -102,7 +102,7 @@ def signin(request):
                 return redirect("price")
         else:
             messages.error(request, "Credentuals dont match!!")
-            return redirect('/') 
+            return redirect('/signin') 
     return render(request,'signin.html')
 
 def signout(request):

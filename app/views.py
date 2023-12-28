@@ -99,10 +99,10 @@ def signin(request):
 
                 login(request, user)
                 username = user.username
-                return redirect("/signup")
+                return redirect("price")
         else:
             messages.error(request, "Credentuals dont match!!")
-            return redirect('price') 
+            return redirect('/') 
     return render(request,'signin.html')
 
 def signout(request):

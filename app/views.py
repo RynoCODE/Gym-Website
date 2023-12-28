@@ -95,9 +95,11 @@ def signin(request):
         password = request.POST.get('password')
         user = authenticate(username=username,password=password)
         if user is not None:
-            login(request, user)
-            username = user.username
-            return redirect("/signup")
+            if user.is_active == True:
+
+                login(request, user)
+                username = user.username
+                return redirect("/signup")
         else:
             messages.error(request, "Credentuals dont match!!")
             return redirect('price') 

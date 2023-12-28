@@ -97,10 +97,10 @@ def signin(request):
         if user is not None:
             login(request, user)
             username = user.username
-            return redirect("/signup")
+            return redirect("price")
         else:
             messages.error(request, "Credentuals dont match!!")
-            return redirect('price') 
+            return redirect('/signin') 
     return render(request,'signin.html')
 
 def signout(request):

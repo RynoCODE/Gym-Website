@@ -18,24 +18,23 @@
     />
     {%load static%}
     <link rel="stylesheet" href="{% static 'styles/signin.css' %}" />
-    <title>signin-signup</title>
+    <title>signin</title>
   </head>
 
   <body>
-    {% for msg in messages %}
-    <div
-      class="alert alert-warning alert-success fade show alertBox"
-      role="alert"
-    >
-      <strong>Hey!</strong> {{ msg }}
-      <button
-        type="button"
-        class="btn-close"
-        data-bs-dismiss="alert"
-        aria-label="Close"
-      ></button>
+    <div class="alertBox">
+      {% for msg in messages %}
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>hey!</strong> {{ msg }}
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
     <div class="container">
       <div class="signin-signup">
         <form action="" class="sign-in-form" method="post">

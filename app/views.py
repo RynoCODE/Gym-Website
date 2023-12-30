@@ -11,8 +11,9 @@ from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.utils.encoding import force_bytes,force_str
 from . tokens import generate_token
 from django.core.mail import EmailMessage
+import razorpay
+from django.contrib.auth.decorators import login_required
 
-# Create your views here.
 
 # checks valid email
 def is_valid_email(email):
@@ -105,6 +106,7 @@ def signin(request):
             return redirect('/signin') 
     return render(request,'signin.html')
 
+@login_required
 def signout(request):
     logout(request)
     messages.success(request, "logged out successfully")
@@ -125,5 +127,22 @@ def activate(request, uidb64,token):
     else:
         return render(request, 'activation_failed.html')
     
+
+@login_required
 def price(request):
+    if request.method == 'POST':
+        if request.POST.get(''):
+            pass
+        client = razorpay.Client(auth=(settings.AUTH, settings.KEY))
+
+        DATA = {
+            "amount": 100,
+            "currency": "INR",
+            "receipt": "receipt#1",
+            "notes": {
+                "key1": "value3",   
+                "key2": "value2"
+            }
+        }
+        payment = client.order.create(data=DATA)
     return render(request, "pricing.html")

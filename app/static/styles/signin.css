@@ -15,11 +15,15 @@ body {
 }
 
 .alertBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    top: 2rem;
-    left: 19rem;
-    z-index: 1;
-    width: 68vw;
+    top: 0.5rem;
+}
+
+.alert {
+    z-index: 99;
 }
 
 .container {

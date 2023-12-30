@@ -13,6 +13,18 @@ body {
     background: linear-gradient(rgb(214, 221, 243), rgb(93, 71, 235));
 }
 
+.alertBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0.5rem;
+}
+
+.alert {
+    z-index: 99;
+}
+
 .container {
     position: relative;
     height: 80vh;

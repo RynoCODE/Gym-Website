@@ -60,7 +60,7 @@ def signup(request):
 
         # Welcome Email
         subject = 'Welcome to Anytime Fitness'
-        message = "Hello " + myuser.username + "!! \n" + "Welcome to Anytime Fitness!! \nThank you for visiting our website\n. We have also sent you a confirmation email, please confirm your email address. \n\nThanking You \nRohit"
+        message = "Hello " + myuser.username + "!! \n" + "Welcome to Anytime Fitness!! \nThank you for visiting our website\n. We have also sent you a confirmation email, please confirm your email address. Please check your Spam inbox if you didn't receive any.  \n\nThanking You \nRohit"
         from_email = settings.EMAIL_HOST_USER
         to_list =  [myuser.email]
         send_mail(subject,message,from_email,to_list,fail_silently=True)
